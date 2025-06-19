@@ -664,7 +664,19 @@ export default function VideoMeetComponent() {
                                 <div className='input-gap'></div>
                             </div>
                             <div className={styles.chattingArea + " videomeet-chat-input"}>
-                                <TextField value={message} onChange={(e) => setMessage(e.target.value)} id="outlined-basic" label="Enter Your chat" variant="outlined" />
+                                <TextField
+                                    value={message}
+                                    onChange={(e) => setMessage(e.target.value)}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter' && !e.shiftKey) {
+                                            e.preventDefault();
+                                            sendMessage();
+                                        }
+                                    }}
+                                    id="outlined-basic"
+                                    label="Enter Your chat"
+                                    variant="outlined"
+                                />
                                 <Button variant='contained' onClick={sendMessage}>Send</Button>
                             </div>
                         </div>

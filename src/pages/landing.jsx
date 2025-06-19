@@ -58,7 +58,7 @@ export default function LandingPage() {
                             {navOpen && <div className="sidebar-overlay" onClick={() => setNavOpen(false)} style={{position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', background: 'rgba(0,0,0,0.35)', zIndex: 99, transition: 'opacity 0.3s', opacity: navOpen ? 1 : 0}}></div>}
                         </nav>
                         <div className="landingMainContainer" style={{display: 'flex', flexWrap: 'wrap', gap: '3vw', alignItems: 'center', justifyContent: 'space-between', padding: '2vw 0'}}>
-                            <div style={{flex: 1}}>
+                            <div className="landing-main-content" style={{flex: 1}}>
                                 <h1 style={{fontSize: '3vw', marginBottom: '1vw'}}><span style={{ color: "#FF9839" }}>Connect</span> with your loved Ones</h1>
                                 <p style={{fontSize: '1.2vw', marginBottom: '2vw'}}>Cover a distance by Apna Video Call</p>
                                 <div role='button' style={{fontSize: '1.2vw', padding: '0.7vw 2vw'}}>
@@ -91,6 +91,7 @@ export default function LandingPage() {
                     .landingMainContainer p, .landingMainContainer div[role='button'] { font-size: 4vw !important; }
                     .landing-image-container { width: 100% !important; min-width: 0 !important; display: flex !important;}
                     .landing-image-container img { width: 100% !important; max-width: 250px !important; min-width: 0 !important; height: auto !important; padding: 2vw !important; display: block !important; margin: 0 auto !important; visibility: visible !important; opacity: 1 !important; }
+                    .landing-main-content { flex: 0.5 !important; }
                 }
                 @media (min-width: 901px) {
                     .nav-hamburger { display: none !important; }

@@ -1,0 +1,78 @@
+/* History page dark theme and card styling */
+
+.history-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #0a0712 0%, #181828 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.history-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+}
+
+.history-header .MuiIconButton-root {
+  background: #181828;
+  color: #a259ff;
+  box-shadow: 0 0 12px #a259ff33;
+  border-radius: 12px;
+  margin-right: 1rem;
+  transition: box-shadow 0.2s;
+}
+.history-header .MuiIconButton-root:hover {
+  box-shadow: 0 0 24px #a259ff99;
+  background: #23233a;
+}
+
+.history-list {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.MuiCard-root {
+  background: #181828 !important;
+  color: #e0d7ff !important;
+  border-radius: 18px !important;
+  box-shadow: 0 0 24px #a259ff22 !important;
+  border: 1.5px solid #a259ff !important;
+}
+
+.MuiCardContent-root {
+  padding: 1.5rem 1.5rem 1rem 1.5rem !important;
+}
+
+.MuiTypography-root {
+  color: #e0d7ff !important;
+}
+
+.MuiTypography-colorTextSecondary {
+  color: #c084fc !important;
+}
+
+@media (max-width: 600px) {
+  .history-bg {
+    padding: 1rem 0.2rem;
+  }
+  .history-header {
+    padding-left: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .history-list {
+    max-width: 98vw;
+    gap: 1rem;
+  }
+  .MuiCardContent-root {
+    padding: 1rem 0.7rem 0.7rem 0.7rem !important;
+  }
+}

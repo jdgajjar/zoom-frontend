@@ -1,0 +1,533 @@
+/* VideoMeet page dark theme and chat focus styling */
+
+.videomeet-bg {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(120deg, #0a0712 0%, #181828 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  position: relative;
+}
+
+.videomeet-main {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: stretch;
+  z-index: 1;
+}
+
+.videomeet-videos {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  padding: 2rem 0 2rem 2rem;
+  gap: 2rem;
+}
+
+.videomeet-video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.videomeet-video-box {
+  background: #181828;
+  border-radius: 18px;
+  box-shadow: 0 0 32px #a259ff22;
+  border: 2px solid #a259ff;
+  overflow: hidden;
+  position: relative;
+  min-width: 280px;
+  min-height: 180px;
+  max-width: 420px;
+  max-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videomeet-video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #23233a;
+}
+
+.videomeet-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.videomeet-controls .MuiIconButton-root {
+  background: #23233a;
+  color: #a259ff;
+  box-shadow: 0 0 12px #a259ff33;
+  border-radius: 12px;
+  transition: box-shadow 0.2s;
+}
+.videomeet-controls .MuiIconButton-root:hover {
+  box-shadow: 0 0 24px #a259ff99;
+  background: #2d2d44;
+}
+
+.videomeet-chat {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  min-width: 320px;
+  max-width: 400px;
+  width: 100%;
+  background: #181828;
+  border-left: 2px solid #a259ff;
+  box-shadow: -8px 0 32px #a259ff22;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.videomeet-chat.videomeet-chat-open {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.videomeet-chat.videomeet-chat-closed {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.videomeet-chat-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.videomeet-chat-header {
+  flex: 0 1 auto;
+  margin: 0 auto;
+  text-align: center;
+  color: #c084fc;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.videomeet-desktop-sidebar-close {
+  position: absolute !important;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.videomeet-chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  padding-right: 8px;
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #a259ff #23233a;
+}
+
+.videomeet-chat-messages::-webkit-scrollbar {
+  width: 8px;
+  background: #23233a;
+  border-radius: 8px;
+}
+
+.videomeet-chat-messages::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #a259ff 0%, #c084fc 100%);
+  border-radius: 8px;
+}
+
+.videomeet-chat-messages::-webkit-scrollbar-track {
+  background: #23233a;
+  border-radius: 8px;
+}
+
+.videomeet-chat-message {
+  background: #23233a;
+  color: #e0d7ff;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  align-self: flex-start;
+  max-width: 80%;
+  box-shadow: 0 0 8px #a259ff22;
+  word-break: break-word;
+  margin-bottom: 0.2rem;
+}
+
+.videomeet-chat-message.me {
+  background: linear-gradient(90deg, #a259ff 0%, #c084fc 100%);
+  color: #fff;
+  align-self: flex-end;
+  box-shadow: 0 0 16px #a259ff55;
+  margin-bottom: 0.2rem;
+}
+
+.input-gap{
+  margin: 0.5rem 0;
+}
+
+.videomeet-chat-input {
+  width: 100%;
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  padding: 0.7rem 0.5rem 0.7rem 0.5rem;
+  background: #181828;
+  border-top: 1px solid #a259ff33;
+  margin-top: 0.5rem;
+}
+
+.mobile-only{
+  display: none !important;
+}
+
+.videomeet-chat-input .MuiTextField-root {
+  flex: 1;
+  background: #23233a !important;
+  border-radius: 8px !important;
+  color: #fff !important;
+}
+
+.videomeet-chat-input .MuiInputBase-root {
+  color: #fff !important;
+}
+
+.videomeet-chat-input .MuiOutlinedInput-notchedOutline {
+  border-color: #a259ff !important;
+}
+
+.videomeet-chat-input .Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #c084fc !important;
+}
+
+.videomeet-chat-input .MuiInputLabel-root {
+  color: #a259ff !important;
+}
+
+.videomeet-chat-input .Mui-focused .MuiInputLabel-root {
+  color: #c084fc !important;
+}
+
+.videomeet-chat-input .MuiButton-root {
+  background: linear-gradient(90deg, #a259ff 0%, #c084fc 100%) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 16px #a259ff55;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+
+.videomeet-mobile-popup {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  background: #23233a;
+  z-index: 200;
+  border-radius: 18px 18px 0 0;
+  box-shadow: 0 -4px 32px #a259ff55;
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.videomeet-mobile-popup.videomeet-mobile-popup-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.videomeet-mobile-popup.videomeet-mobile-popup-closed {
+  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 600px) {
+  .desktop-only {
+    display: none !important;
+  }
+  .mobile-only {
+    display: flex !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    background: #181828;
+    z-index: 100;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0;
+    box-shadow: 0 -2px 16px #a259ff22;
+  }
+  .videomeet-mobile-bottombar {
+    display: flex !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    background: #181828;
+    z-index: 100;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem 0;
+    box-shadow: 0 -2px 16px #a259ff22;
+    gap: 2rem;
+  }
+  .videomeet-mobile-popup {
+    display: block !important;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    background: #23233a;
+    z-index: 200;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -4px 32px #a259ff55;
+    animation: popupUp 0.2s;
+  }
+  .videomeet-mobile-popup-inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+    gap: 1.5rem;
+  }
+  .videomeet-mobile-sidebar {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    border-radius: 0 !important;
+    z-index: 300 !important;
+    box-shadow: none !important;
+    border-left: none !important;
+    border-top: 2px solid #a259ff !important;
+    background: #181828 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 !important;
+    min-width: 100vw !important;
+    max-width: 100vw !important;
+    width: 100vw !important;
+    left: 0;
+    right: 0;
+    border-left: none;
+    border-top: 2px solid #a259ff;
+    border-radius: 18px 18px 0 0;
+    bottom: 0;
+    top: auto;
+    height: 60vh;
+    position: fixed !important;
+    z-index: 1001;
+    box-shadow: 0 -8px 32px #a259ff22;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+  }
+  .videomeet-mobile-sidebar.videomeet-chat-open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .videomeet-mobile-sidebar.videomeet-chat-closed {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+ .vcall-container {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    .vcall-title {
+      margin-bottom: 15px;
+      font-size: 1.6rem;
+      color: #c084fc;
+    }
+
+    .vcall-form-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .vcall-input {
+      flex: 1;
+      padding: 12px 16px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      background-color: #1a1333;
+      color: white;
+      font-size: 1rem;
+      box-shadow: inset 0 0 0 2px #914cff;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .vcall-input:focus {
+      box-shadow: inset 0 0 0 2px #c491ff;
+    }
+
+    .vcall-button {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(to right, #9b5cff, #e55fff);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .vcall-button:hover {
+      background: linear-gradient(to right, #a874ff, #f37bff);
+    }
+
+    .vcall-video-container {
+      width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(144, 101, 255, 0.4);
+    }
+
+    .vcall-video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 500px) {
+      .vcall-title {
+        font-size: 1.3rem;
+      }
+
+      .vcall-input,
+      .vcall-button {
+        flex: 100%;
+      }
+    }
+
+@media (max-width: 900px) {
+  .videomeet-main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .videomeet-videos {
+    padding: 1rem 1rem 0 1rem;
+  }
+  .videomeet-chat {
+    min-width: 0;
+    max-width: 100vw;
+    border-left: none;
+    border-top: 2px solid #a259ff;
+    box-shadow: 0 -8px 32px #a259ff22;
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .videomeet-videos {
+    padding: 0.5rem 0.2rem 0 0.2rem;
+    gap: 1rem;
+  }
+  .videomeet-chat {
+    padding: 0.5rem 0.2rem 0.2rem 0.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .videomeet-main {
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    min-height: 100vh;
+    padding: 0;
+  }
+  .videomeet-videos {
+    padding: 0.2rem 0.1rem 0 0.1rem;
+    gap: 0.5rem;
+  }
+  .videomeet-video-box {
+    min-width: 120px;
+    min-height: 80px;
+    max-width: 98vw;
+    max-height: 30vh;
+    border-radius: 10px;
+    box-shadow: 0 0 8px #a259ff22;
+  }
+  .videomeet-chat {
+    padding: 0.2rem 0.1rem 0.1rem 0.1rem;
+    font-size: 0.95rem;
+    min-width: 0;
+    max-width: 100vw;
+    border-top: 2px solid #a259ff;
+    border-left: none;
+    box-shadow: 0 -4px 16px #a259ff22;
+  }
+  .videomeet-chat-header {
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+  }
+  .videomeet-chat-message {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.95rem;
+    border-radius: 7px;
+  }
+  .videomeet-controls {
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .videomeet-controls .MuiIconButton-root {
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+  }
+}

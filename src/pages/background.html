@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfect Planet Scene</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background-color: #050509;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .planet {
+      position: absolute;
+      border-radius: 50%;
+      background-color: #000;
+    }
+
+    /* Large Planet: Top Centered, Only Half Visible */
+    .planet.large {
+      width: 1000px;
+      height: 1000px;
+      left: 50%;
+      top: -500px;
+      transform: translateX(-50%);
+      background: radial-gradient(
+        circle at 90% 45%,
+        rgba(140, 115, 220, 0.2),
+        #000 60%
+      );
+      box-shadow:
+        inset -160px 0 220px rgba(0, 0, 0, 0.95),
+        100px 0 240px rgba(140, 115, 220, 0.2);
+    }
+
+    /* Small Planet: Bottom Right Corner, Bottom Cut Only */
+    .planet.small {
+      width: 300px;
+      height: 300px;
+      right: 40px;
+      bottom: -150px;
+      background: radial-gradient(
+        circle at 85% 40%,
+        rgba(140, 115, 220, 0.1),
+        #000 65%
+      );
+      box-shadow:
+        inset -40px 0 80px rgba(0, 0, 0, 0.85),
+        30px 0 100px rgba(140, 115, 220, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="planet large"></div>
+  <div class="planet small"></div>
+</body>
+</html>

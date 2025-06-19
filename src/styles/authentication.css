@@ -1,0 +1,120 @@
+@keyframes particleAnimation {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.animated-background {
+  height: 100vh;
+  width: 100%;
+  background: #000000;
+  overflow: hidden;
+  position: relative;
+}
+
+.particle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(circle, #90caf9, transparent);
+  border-radius: 50%;
+  animation: particleAnimation 3s linear infinite;
+}
+
+.animated-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.particle:nth-child(1) {
+  top: 50%;
+  left: 20%;
+  animation-delay: 0.5s;
+}
+.particle:nth-child(2) {
+  top: 70%;
+  left: 40%;
+  animation-delay: 1s;
+}
+.particle:nth-child(3) {
+  top: 30%;
+  left: 60%;
+  animation-delay: 1.5s;
+}
+.particle:nth-child(4) {
+  top: 80%;
+  left: 80%;
+  animation-delay: 2s;
+}
+
+.form-transition-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+.form-transition-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.form-transition-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+.form-transition-exit-active {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.auth-form-paper {
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: box-shadow 0.3s;
+}
+.auth-form-paper:hover {
+  box-shadow: 0 12px 40px 0 rgba(144,202,249,0.25);
+}
+.auth-form-paper .MuiAvatar-root {
+  background: linear-gradient(135deg, #90caf9 60%, #f48fb1 100%);
+}
+.auth-form-paper .MuiButton-contained {
+  background: #90caf9;
+  color: #222;
+  font-weight: bold;
+  box-shadow: 0 2px 8px 0 rgba(144,202,249,0.15);
+}
+.auth-form-paper .MuiButton-contained:hover {
+  background: #64b5f6;
+}
+.auth-form-paper .MuiTextField-root {
+  background: rgba(255,255,255,0.04);
+  border-radius: 6px;
+}
+.auth-form-paper .MuiInputBase-input {
+  color: #fff;
+}
+.auth-form-paper .MuiInputLabel-root {
+  color: #90caf9;
+}
+.auth-form-paper .Mui-focused .MuiInputLabel-root {
+  color: #f48fb1;
+}
+.auth-form-paper .MuiOutlinedInput-notchedOutline {
+  border-color: #90caf9;
+}
+.auth-form-paper .Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #f48fb1;
+}

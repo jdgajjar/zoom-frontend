@@ -15,6 +15,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import CloseIcon from '@mui/icons-material/Close';
 import server from '../environment';
 import '../styles/videomeet.css';
+import '../styles/videomeet.mobile.css';
 
 const server_url = server;
 

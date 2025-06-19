@@ -1,0 +1,26 @@
+@media (max-width: 900px) {
+  .videomeet-chat-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100vh !important;
+    justify-content: flex-end !important;
+    overflow-y: auto !important;
+  }
+  .videomeet-chat-messages {
+    margin-bottom: 70px !important;
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+  }
+  .videomeet-chat-input {
+    position: fixed !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100vw !important;
+    z-index: 1100 !important;
+    background: #181828 !important;
+    border-top: 2px solid #a259ff33 !important;
+    padding: 0.7rem 0.5rem 0.7rem 0.5rem !important;
+    box-sizing: border-box !important;
+    transition: bottom 0.2s;
+  }
+}

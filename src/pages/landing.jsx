@@ -86,15 +86,155 @@ export default function LandingPage() {
                     .landingPageContainer { gap: 7vw !important; }
                     nav { flex-direction: row !important; gap: 5vw !important; align-items: flex-start !important; margin-right: 50px !important;}
                     .navlist { font-size: 5vw !important; }
-                    .landingMainContainer { flex-direction: column !important; gap: 8vw !important; padding: 7vw 0 !important; }
-                    .landingMainContainer h1 { fontSize: 7vw !important; }
-                    .landingMainContainer p, .landingMainContainer div[role='button'] { font-size: 4vw !important; }
-                    .landing-image-container { width: 100% !important; min-width: 0 !important; display: flex !important;}
-                    .landing-image-container img { width: 100% !important; max-width: 250px !important; min-width: 0 !important; height: auto !important; padding: 2vw !important; display: block !important; margin: 0 auto !important; visibility: visible !important; opacity: 1 !important; }
-                    .landing-main-content { flex: 0.5 !important; }
+                    .landingMainContainer {
+                        display: flex !important;
+                        flex-direction: column !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                        gap: 6vw !important;
+                        padding: 7vw 0 0 0 !important;
+                        width: 100% !important;
+                        box-sizing: border-box !important;
+                    }
+                    .landingMainContainer h1 {
+                        font-size: 7vw !important;
+                        text-align: center !important;
+                        margin-bottom: 2vw !important;
+                        word-break: break-word !important;
+                        white-space: normal !important;
+                        width: 100% !important;
+                        max-width: 95vw !important;
+                    }
+                    .landingMainContainer p, .landingMainContainer div[role='button'] {
+                        font-size: 4vw !important;
+                        text-align: center !important;
+                        word-break: break-word !important;
+                        white-space: normal !important;
+                       
+                        max-width: 95vw !important;
+                    }
+                    .landing-image-container {
+                        width: 100% !important;
+                        min-width: 0 !important;
+                        display: flex !important;
+                        justify-content: center !important;
+                        margin-top: 2vw !important;
+                    }
+                    .landing-image-container img {
+                        width: 80vw !important;
+                        max-width: 250px !important;
+                        min-width: 0 !important;
+                        height: auto !important;
+                        padding: 2vw !important;
+                        display: block !important;
+                        margin: 0 auto !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                    }
+                    .landing-main-content {
+                        width: 100% !important;
+                        flex: unset !important;
+                        display: flex !important;
+                        flex-direction: column !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                    }
+                    .get-started-btn {
+                        font-size: 4vw !important;
+                        padding: 2vw 6vw !important;
+                        margin-top: 2vw !important;
+                        border-radius: 2vw !important;
+                        box-shadow: 0 2px 8px #0001;
+                        max-width: 70vw !important;
+                        width: auto !important;
+                        min-width: 40vw !important;
+                        overflow: hidden !important;
+                        text-overflow: ellipsis !important;
+                        white-space: nowrap !important;
+                    }
+                }
+                @media (min-width: 601px) and (max-width: 900px) {
+                    .landingMainContainer {
+                        display: flex !important;
+                        flex-direction: row !important;
+                        align-items: center !important;
+                        justify-content: space-between !important;
+                        gap: 3vw !important;
+                        padding: 2vw 0 !important;
+                        width: 100% !important;
+                    }
+                    .landing-main-content {
+                        flex: 1 !important;
+                        width: auto !important;
+                        align-items: flex-start !important;
+                        justify-content: center !important;
+                        display: flex !important;
+                        flex-direction: column !important;
+                    }
+                    .landing-image-container {
+                        flex: 1 !important;
+                        width: auto !important;
+                        min-width: 0 !important;
+                        display: flex !important;
+                        justify-content: center !important;
+                        margin-top: 0 !important;
+                    }
+                    .landing-image-container img {
+                        width: 100% !important;
+                        max-width: 250px !important;
+                        min-width: 0 !important;
+                        height: auto !important;
+                        padding: 1vw !important;
+                        display: block !important;
+                        margin: 0 auto !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                    }
                 }
                 @media (min-width: 901px) {
                     .nav-hamburger { display: none !important; }
+                }
+                @media (min-width: 594px) and (max-width: 600px) {
+             .landingMainContainer div[role='button']
+                    {
+                        margin-left: 55px !important;
+                    }
+                    .landingMainContainer {
+                        display: flex !important;
+                        flex-direction: row !important;
+                        align-items: center !important;
+                        justify-content: space-between !important;
+                        gap: 3vw !important;
+                        padding: 2vw 0 !important;
+                        width: 100% !important;
+                    }
+                    .landing-main-content {
+                        flex: 1 !important;
+                        width: auto !important;
+                        align-items: flex-start !important;
+                        justify-content: center !important;
+                        display: flex !important;
+                        flex-direction: column !important;
+                    }
+                    .landing-image-container {
+                        flex: 1 !important;
+                        width: auto !important;
+                        min-width: 0 !important;
+                        display: flex !important;
+                        justify-content: center !important;
+                        margin-top: 0 !important;
+                    }
+                    .landing-image-container img {
+                        width: 100% !important;
+                        max-width: 250px !important;
+                        min-width: 0 !important;
+                        height: auto !important;
+                        padding: 1vw !important;
+                        display: block !important;
+                        margin: 0 auto !important;
+                        visibility: visible !important;
+                        opacity: 1 !important;
+                    }
                 }
             `}</style>
         </div>

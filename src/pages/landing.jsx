@@ -84,7 +84,7 @@ export default function LandingPage() {
                 @media (max-width: 600px) {
                     .responsive-container { padding: 7vw !important; }
                     .landingPageContainer { gap: 7vw !important; }
-                    nav { flex-direction: row !important; gap: 5vw !important; align-items: flex-start !important; margin-right: 20px !important;}
+                    nav { flex-direction: row !important; gap: 5vw !important; align-items: flex-start !important; margin-right: 50px !important;}
                     .navlist { font-size: 5vw !important; }
                     .landingMainContainer { flex-direction: column !important; gap: 8vw !important; padding: 7vw 0 !important; }
                     .landingMainContainer h1 { fontSize: 7vw !important; }

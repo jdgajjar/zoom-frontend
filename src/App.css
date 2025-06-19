@@ -123,6 +123,8 @@
     justify-content: space-between !important;
     flex-wrap: nowrap !important;
     gap: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
   .navHeader {
     display: flex !important;
@@ -132,13 +134,16 @@
     min-width: 0 !important;
     gap: 1vw !important;
     width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
   .nav-hamburger {
     margin-left: auto !important;
     margin-right: 0 !important;
     align-self: center !important;
     position: relative !important;
-    top: 0.5vw !important;
+    top: 0 !important;
+    margin-top: 0 !important;
     display: flex !important;
   }
   .desktop-navlist {
@@ -147,6 +152,10 @@
     align-items: center !important;
     gap: 1vw !important;
     margin-left: 2vw !important;
+  }
+  .landingMainContainer {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }
 
@@ -233,4 +242,11 @@
   box-shadow:
     inset -40px 0 80px rgba(0, 0, 0, 0.85),
     30px 0 100px rgba(140, 115, 220, 0.1);
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .landingMainContainer {
+    padding-left: 4vw !important;
+    padding-right: 4vw !important;
+  }
 }

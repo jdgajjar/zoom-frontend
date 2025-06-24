@@ -111,7 +111,7 @@ export default function LandingPage() {
                         word-break: break-word !important;
                         white-space: normal !important;
                        
-                        max-width: 95vw !important;
+                        max-width: 80vw !important;
                     }
                     .landing-image-container {
                         width: 100% !important;
@@ -152,6 +152,8 @@ export default function LandingPage() {
                         text-overflow: ellipsis !important;
                         white-space: nowrap !important;
                     }
+                   
+                   
                 }
                 @media (min-width: 601px) and (max-width: 900px) {
                     .landingMainContainer {
@@ -195,26 +197,33 @@ export default function LandingPage() {
                     .nav-hamburger { display: none !important; }
                 }
                 @media (min-width: 594px) and (max-width: 600px) {
-             .landingMainContainer div[role='button']
-                    {
-                        margin-left: 55px !important;
-                    }
                     .landingMainContainer {
                         display: flex !important;
                         flex-direction: row !important;
                         align-items: center !important;
-                        justify-content: space-between !important;
+                        justify-content: center !important;
                         gap: 3vw !important;
                         padding: 2vw 0 !important;
                         width: 100% !important;
                     }
                     .landing-main-content {
                         flex: 1 !important;
-                        width: auto !important;
-                        align-items: flex-start !important;
+                        width: 100% !important;
+                        align-items: center !important;
                         justify-content: center !important;
                         display: flex !important;
                         flex-direction: column !important;
+                        text-align: center !important;
+                        padding: 0 2vw !important;
+                    }
+                    .landingMainContainer h1, .landingMainContainer p, .landingMainContainer div[role='button'] {
+                        text-align: center !important;
+                        margin-left: 0 !important;
+                        margin-right: 0 !important;
+                        width: 100% !important;
+                        max-width: 100vw !important;
+                        white-space: normal !important;
+                        word-break: break-word !important;
                     }
                     .landing-image-container {
                         flex: 1 !important;
